@@ -1,0 +1,58 @@
+{
+  "metadata" : {
+    "name" : "new-schedule",
+    "projectId" : "155",
+    "language" : "python",
+    "configurations" : {
+      "common" : [ {
+        "scope" : "dag_args",
+        "name" : "dag_id",
+        "type" : "string",
+        "value" : "new-schedule",
+        "required" : true,
+        "comment" : "This value is used if you download the DAG as a zip and manually put it in your airflow's DAG bag"
+      }, {
+        "scope" : "dag_args",
+        "name" : "start_date",
+        "type" : "date_time",
+        "value" : "2022-01-04T09:18:14.487838 GMT",
+        "required" : true,
+        "comment" : "Your schedule will start running at start_date + interval. The first run starts soon after one interval has passed after the start_date."
+      }, {
+        "scope" : "dag_args",
+        "name" : "schedule_interval",
+        "type" : "cron_expression",
+        "value" : "0 0 * * *",
+        "required" : true,
+        "comment" : "The interval with which this schedule will run. Enter a cron expression here."
+      } ],
+      "fabrics" : { }
+    }
+  },
+  "processes" : {
+    "Email_0" : {
+      "component" : "Email",
+      "metadata" : {
+        "label" : "Email_0",
+        "x" : 579,
+        "y" : 130
+      },
+      "ports" : {
+        "inputs" : [ "in" ],
+        "outputs" : [ "out" ]
+      },
+      "properties" : {
+        "trigger" : "all_success",
+        "recipient" : "pankaj@simpledatalabs.com",
+        "subject" : "Delta",
+        "message" : "Delta"
+      }
+    }
+  },
+  "connections" : [ ],
+  "ports" : {
+    "inputs" : [ "in" ],
+    "outputs" : [ "out" ]
+  },
+  "groups" : { }
+}

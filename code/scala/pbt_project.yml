@@ -14,4 +14,9 @@ workflows:
       inputs: []
       outputs: []
 datasets: {}
-schedules: {}
+schedules:
+  schedules/new-schedule:
+    name: new-schedule
+    description: Delta
+    createdAt: '2022-01-05 09:17:41'
+    author: ayush@simpledatalabs.com
