@@ -1,0 +1,17 @@
+name: managed
+description: ''
+version: 1
+author: Pankaj@simpledatalabs.com
+workflows:
+  workflows/Delta:
+    name: Delta
+    description: DElta
+    author: Pankaj@simpledatalabs.com
+    mode: batch
+    language: scala
+    createdAt: '2022-01-05 05:52:09'
+    datasets:
+      inputs: []
+      outputs: []
+datasets: {}
+schedules: {}
